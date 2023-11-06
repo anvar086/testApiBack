@@ -36,7 +36,6 @@ class ArticleController extends Controller
     public function show($id){
         $article = Article::where('id',$id)->first();
         $user = $article->user->name;
-        Log::channel('daily')->critical('asdadsa');
         return $this->success($article);
     }
 
